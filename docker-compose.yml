@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vite_fast
+    working_dir: /app
+    volumes:
+      - ./vite_fast:/app
+    ports:
+      - "5173:5173"

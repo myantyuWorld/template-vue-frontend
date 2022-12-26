@@ -8,3 +8,7 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 1. docker-compose build
 1. docker compose run frontend yarn install
 2. docker compose up
+
+# css framework
+
+https://tailwindcss.com/

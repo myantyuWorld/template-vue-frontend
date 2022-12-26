@@ -4,5 +4,7 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 
 # 再利用するには
 
-1. 今後新規でプロジェクトを作成する際は、今回の作業フォルダをコピー
-2. docker compose build→ docker compose upをするだけ
+1. git clone 
+1. docker-compose build
+1. docker compose run frontend yarn install
+2. docker compose up

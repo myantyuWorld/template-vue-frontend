@@ -2,7 +2,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: [],
+  // purge: [],
+  // 全てのファイルで、tailwind.cssを使用できるようにする
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
       sans: [

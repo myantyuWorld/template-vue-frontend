@@ -1,6 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="todo">
+    <h1>TODO APP</h1>
+    <div class="text-5xl text-bold">tailwind css</div>
   </div>
 </template>
 

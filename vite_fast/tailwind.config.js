@@ -1,31 +1,38 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { join } = require('path')
-const BASE_DIR = join(__dirname, 'src')
-const VUE_FILE = join('**', '*.vue')
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultTheme = require('tailwindcss/defaultTheme');
 
-const config = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: {
-    // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: process.env.NODE_ENV === 'production',
-    content: [join(BASE_DIR, VUE_FILE), join(__dirname, '*.html')],
-  },
+module.exports = {
+  purge: [],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: [
+        "'Righteous'",
+        "'Hiragino Maru Gothic Pro'",
+        "'ヒラギノ角ゴ Pro W3'",
+        "'メイリオ'",
+        "'Meiryo'",
+        "'MS Pゴシック'",
+      ],
+      serif: [...defaultTheme.fontFamily.serif],
+      mono: [...defaultTheme.fontFamily.mono],
+    },
+    flexGrow: {
+      default: 1,
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+    },
+
+    extend: {
+      colors: {
+        'font-color': '#ececec',
+      },
+    },
   },
   variants: {},
-  plugins:[],
-}
-
-module.exports = config
+  plugins: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
+};

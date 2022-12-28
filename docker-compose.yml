@@ -10,3 +10,12 @@ services:
       - ./frontend/vite_fast:/app
     ports:
       - "5173:5173"
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: django_api
+    working_dir: /app
+    tty: true
+    volumes:
+      - ./backend:/app

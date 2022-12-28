@@ -3,10 +3,10 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: frontend/Dockerfile
     container_name: vite_fast
     working_dir: /app
     volumes:
-      - ./vite_fast:/app
+      - ./frontend/vite_fast:/app
     ports:
       - "5173:5173"

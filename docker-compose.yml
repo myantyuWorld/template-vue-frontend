@@ -18,4 +18,4 @@ services:
     working_dir: /app
     tty: true
     volumes:
-      - ./backend:/app
+      - ./backend/django_api:/app

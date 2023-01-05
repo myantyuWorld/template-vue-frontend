@@ -3,11 +3,11 @@
 - Vue3(Vite + tailwindcss)
 - Django
 
-このテンプレートを利用し、個人開発で作りたいアプリを作る。
-[ ] "docker-compose up"でサンプルテーブルをmigrationし、サンプルAPIを使用したVueアプリを実行できる
-[ ] AWS ECSにデプロイできるようにする(Fargate? Copilot?)
-[ ] ローカル開発ー＞AWSへのデプロイを自動化させたい（Github mainブランチpushでデプロイ、が理想）
-[ ] デプロイ結果を簡単に通知してほしい 
+このテンプレートを利用し、個人開発で作りたいアプリを作る。  
+[ ] "docker-compose up"でサンプルテーブルをmigrationし、サンプルAPIを使用したVueアプリを実行できる  
+[ ] AWS ECSにデプロイできるようにする(Fargate? Copilot?)  
+[ ] ローカル開発ー＞AWSへのデプロイを自動化させたい（Github mainブランチpushでデプロイ、が理想）  
+[ ] デプロイ結果を簡単に通知してほしい   
 
 # 参考
 

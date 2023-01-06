@@ -20,6 +20,15 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 % docker-compose build
 % docker compose run frontend yarn install
 % docker compose up
+% docker-compose run --rm db psql -h db -U postgres
+```
+
+postgres
+
+```sh
+% psql -h localhost -p 5432 -U postgres
+% \l // show databases
+% \c DB name // use database
 ```
 
 

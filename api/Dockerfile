@@ -17,3 +17,4 @@ RUN pip install django
 RUN pip install psycopg2
 RUN pip install djangorestframework
 RUN pip install django-filter 
+RUN pip install django-cors-headers

@@ -13,7 +13,7 @@
 
 https://qiita.com/generonishimura/items/88742085294bd0b234a6
 
-# 再利用するには
+# 始めるには
 
 ```sh
 % git clone 
@@ -25,16 +25,24 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 ```
 
 Django super user
-※　管理サイトで確認するなら
+※　管理サイトで確認するなら以下を実行すること
 ```
 $ docker-compose run --rm api python manage.py createsueruser
 ```
 
-API
+# Frontend
+
+```
+yarn add {HOGEHOGE}
+```
+
+# API
 
 ```
 localhost:18080/api
 ```
+
+# DB
 
 postgres
 

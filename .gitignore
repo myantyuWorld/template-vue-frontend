@@ -1,1 +1,3 @@
 node_modules
+postgres/data/
+api/django_api/django_api/__pycache__/

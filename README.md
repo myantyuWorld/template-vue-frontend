@@ -21,6 +21,14 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 % docker compose run frontend yarn install
 % docker compose up
 % docker-compose run --rm db psql -h db -U postgres
+% docker-compose run --rm api python manage.py makemigrations
+% docker-compose run --rm api python manage.py migrate
+```
+
+Django super user
+
+```
+$ docker-compose run --rm api python manage.py createsueruser
 ```
 
 postgres

@@ -24,11 +24,12 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 % docker compose up
 ```
 
-Django super user
-※　管理サイトで確認するなら以下を実行すること
+# aws-cli
+
 ```
-$ docker-compose run --rm api python manage.py createsueruser
+docker-compose run --rm aws-cli-container /bin/bash
 ```
+
 
 # Frontend
 
@@ -37,6 +38,12 @@ yarn add {HOGEHOGE}
 ```
 
 # API
+
+Django super user
+※　管理サイトで確認するなら以下を実行すること
+```
+$ docker-compose run --rm api python manage.py createsueruser
+```
 
 ```
 localhost:18080/api

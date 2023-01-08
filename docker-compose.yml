@@ -1,12 +1,13 @@
 version: '3.9'
 services:
   aws-cli-container:
+    platform: linux/x86_64
     build: 
       context: .
       dockerfile: aws-cli/Dockerfile
     container_name: awscli-container
     volumes:
-      - .:/workdir
+      - ./aws-cli:/workdir
     env_file:
       - .env
     environment:

@@ -17,6 +17,7 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 
 ```sh
 % git clone 
+% cp .env_template .env // AWS ACCESS KEY等は、Slack#ブックマーク参照
 % docker-compose build
 % docker compose run frontend yarn install
 % docker-compose run --rm api python manage.py makemigrations
@@ -25,9 +26,17 @@ https://qiita.com/generonishimura/items/88742085294bd0b234a6
 ```
 
 # aws-cli
+※ // AWS ACCESS KEY等は、Slack#ブックマーク参照
 
 ```
 docker-compose run --rm aws-cli-container /bin/bash
+
+↓↓↓
+
+bash-4.2# aws --version 
+aws-cli/2.9.13 Python/3.9.11 Linux/5.15.49-linuxkit exe/x86_64.amzn.2 prompt/off
+bash-4.2# aws s3 ls
+2023-01-XX XX:XX:XX {hogehoge}
 ```
 
 

@@ -28,10 +28,10 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import axios from 'axios'
 
-const aaa = await axios.get("http://localhost:18080/api/members/")
+const aaa = axios.get("http://localhost:18080/api/members/")
 console.log(aaa)
 
 </script>

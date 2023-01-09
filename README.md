@@ -39,6 +39,39 @@ bash-4.2# aws s3 ls
 2023-01-XX XX:XX:XX {hogehoge}
 ```
 
+## frontend appのS3へのアップロード
+
+1. AWSコンソールから、バケットを作成する
+2. バケットポリシー設定
+読み取りだけ、許可する
+```
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1673238767769",
+    "Statement": [
+        {
+            "Sid": "Stmt1673238766826",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::{HOGEHOGE}/*"
+        }
+    ]
+}
+```
+
+3. frontendコンテナに入り、App buildする
+```
+yarn build
+```
+
+4. S3 upload
+```
+aws s3 cp frontend/vite_fast/dist s3://{HOGEHOGE}/ --recursive
+```
+
 
 # Frontend
 

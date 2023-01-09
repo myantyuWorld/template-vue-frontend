@@ -43,14 +43,15 @@ bash-4.2# aws s3 ls
 
 1. AWSコンソールから、バケットを作成する
 2. バケットポリシー設定
-読み取りだけ、許可する
+- 読み取りだけ、許可する
+- バケットポリシージェネレータで作成可能
 ```
 {
     "Version": "2012-10-17",
     "Id": "Policy1673238767769",
     "Statement": [
         {
-            "Sid": "Stmt1673238766826",
+            "Sid": "hogehogehogehoge",
             "Effect": "Allow",
             "Principal": {
                 "AWS": "*"

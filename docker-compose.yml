@@ -35,6 +35,9 @@ services:
       - "18080:8080"
     volumes:
       - ./api/django_api:/app
+    depends_on:
+      db:
+        condition: service_healthy
   db:
     build: 
       context: .

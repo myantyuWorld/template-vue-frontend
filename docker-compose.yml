@@ -23,21 +23,6 @@ services:
       - ./frontend/vite_fast:/app
     ports:
       - "15173:5173"
-  api:
-    build:
-      context: .
-      dockerfile: api/Dockerfile
-    container_name: api
-    working_dir: /app
-    tty: true
-    command: python manage.py runserver 0.0.0.0:8080
-    ports:
-      - "18080:8080"
-    volumes:
-      - ./api/django_api:/app
-    depends_on:
-      db:
-        condition: service_healthy
   db:
     build: 
       context: .
@@ -56,4 +41,19 @@ services:
       interval: 1s
       retries: 5
     command: postgres -c log_statement=all
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: api
+    working_dir: /app
+    tty: true
+    command: python manage.py runserver 0.0.0.0:8080
+    ports:
+      - "18080:8080"
+    volumes:
+      - ./api/django_api:/app
+    depends_on:
+      db:
+        condition: service_healthy
 

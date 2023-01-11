@@ -19,11 +19,13 @@ RUN pip install djangorestframework
 RUN pip install django-filter 
 RUN pip install django-cors-headers
 
-COPY ./api/django_api /app/
 WORKDIR /app
+COPY ./api/django_api /app/
+EXPOSE 8080
 # 以下、できてない（Dockerfileをbuildするタイミングでは"db"コンテナは起動してないので、migrateでエラーとなる
 # ```
 # 0 0.564 psycopg2.OperationalError: could not translate host name "db" to address: Name or service not known
 # ```
 # RUN python manage.py migrate
-RUN python manage.py runserver 0.0.0.0:8080
+# RUN python manage.py runserver 0.0.0.0:8080
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

@@ -44,7 +44,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: api/Dockerfile
+      dockerfile: api/django_api/Dockerfile
     container_name: api
     working_dir: /app
     tty: true

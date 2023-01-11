@@ -23,7 +23,7 @@ RUN pip install django-cors-headers
 # ```
 # 0 0.564 psycopg2.OperationalError: could not translate host name "db" to address: Name or service not known
 # ```
-# COPY ./api/django_api /app/
+COPY ./api/django_api /app/
 # WORKDIR /app
 # RUN python manage.py migrate
 # RUN python manage.py runserver 0.0.0.0:8080

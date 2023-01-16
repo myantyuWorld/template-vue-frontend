@@ -57,3 +57,13 @@ services:
       db:
         condition: service_healthy
 
+  web:
+    build: 
+      context: .
+      dockerfile: django-copilot/Dockerfile
+    ports:
+      - "18000:8000"
+    volumes:
+      - .:/code
+
+

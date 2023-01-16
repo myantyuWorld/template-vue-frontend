@@ -20,7 +20,7 @@ RUN pip install django-filter
 RUN pip install django-cors-headers
 
 WORKDIR /app
-COPY ./api/django_api /app/
+COPY ./api/django_api/webapi /app/
 EXPOSE 8080
 # 以下、できてない（Dockerfileをbuildするタイミングでは"db"コンテナは起動してないので、migrateでエラーとなる
 # ```

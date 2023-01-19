@@ -1,5 +1,7 @@
 # 構成
-## アーキテクチャ  
+## AWS Copilotの考え方
+![image](https://user-images.githubusercontent.com/26809782/213391899-04cf5cc0-1966-4719-a52e-334c281c3003.png)
+## AWS アーキテクチャ  
 https://docs.aws.amazon.com/ja_jp/prescriptive-guidance/latest/patterns/deploy-a-clustered-application-to-amazon-ecs-by-using-aws-copilot.html.  
 ![image](https://user-images.githubusercontent.com/26809782/213385568-7a688e79-93e1-49bd-95aa-ac6de9100b25.png)
 

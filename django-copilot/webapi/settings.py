@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,6 +80,28 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+# TODO : ローカルでもこの形式で取得できるようにする
+# MYDJANGODB_SECRET=
+# {
+#   "dbClusterIdentifier":"HOGEHOGE",
+#   "password":"yfkFm2vqIKbjEMfJ",
+#   "dbname":"mydb",
+#   "engine":"postgres",
+#   "port":5432,
+#   "host":"HOGEHOGE.cluster-aiueoaiueo.ap-northeast-1.rds.amazonaws.com",
+#   "username":"postgres"
+# }
+DBINFO = json.loads(os.environ.get("MYDJANGODB_SECRET", "{}"))
+DATABASES = {
+   "default": {
+       "ENGINE": "django.db.backends.postgresql",
+       "HOST": DBINFO["host"],
+       "PORT": DBINFO["port"],
+       "NAME": DBINFO["dbname"],
+       "USER": DBINFO["username"],
+       "PASSWORD": DBINFO["password"],
+   }
 }
 
 

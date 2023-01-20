@@ -4,6 +4,8 @@
 ## AWS アーキテクチャ  
 https://docs.aws.amazon.com/ja_jp/prescriptive-guidance/latest/patterns/deploy-a-clustered-application-to-amazon-ecs-by-using-aws-copilot.html.  
 ![image](https://user-images.githubusercontent.com/26809782/213385568-7a688e79-93e1-49bd-95aa-ac6de9100b25.png)
+## localでのCopilot開発・デプロイサイクル
+![image](https://user-images.githubusercontent.com/26809782/213664880-003a3006-d3a7-4ed2-aabf-51599d709033.png)
 
 - Vue3(Vite + tailwindcss)
 - Django

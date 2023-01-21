@@ -180,3 +180,4 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/django
 .DS_Store
 .workspace
+api/django_api/django_api/__pycache__/settings.cpython-311.pyc

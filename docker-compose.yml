@@ -41,28 +41,33 @@ services:
       interval: 1s
       retries: 5
     command: postgres -c log_statement=all
-  api:
-    build:
-      context: .
-      dockerfile: api/django_api/Dockerfile
-    container_name: api
-    working_dir: /app
-    tty: true
-    # command: python manage.py runserver 0.0.0.0:8080
-    ports:
-      - "18080:8080"
-    volumes:
-      - ./api/django_api:/app
-    depends_on:
-      db:
-        condition: service_healthy
+  # api:
+  #   build:
+  #     context: .
+  #     dockerfile: api/django_api/Dockerfile
+  #   container_name: api
+  #   working_dir: /app
+  #   tty: true
+  #   # command: python manage.py runserver 0.0.0.0:8080
+  #   ports:
+  #     - "18080:8080"
+  #   volumes:
+  #     - ./api/django_api:/app
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
   web:
     build: 
       context: .
       dockerfile: django-copilot/Dockerfile
+    env_file:
+      - django-copilot/.env
     ports:
       - "18000:8000"
     volumes:
       - ./django-copilot:/code
+    depends_on:
+      db:
+        condition: service_healthy
 
 

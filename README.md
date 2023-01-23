@@ -1,4 +1,7 @@
-# 構成
+# システム構成
+
+<details><summary>詳細はこちら</summary><div>
+  
 ## AWS Copilotの考え方
 <!-- ![image](https://user-images.githubusercontent.com/26809782/213391899-04cf5cc0-1966-4719-a52e-334c281c3003.png) -->
 <img src="https://user-images.githubusercontent.com/26809782/213391899-04cf5cc0-1966-4719-a52e-334c281c3003.png" width="30%">
@@ -17,6 +20,8 @@ https://docs.aws.amazon.com/ja_jp/prescriptive-guidance/latest/patterns/deploy-a
 - frontend : Vue3(Vite + [tailwindcss](https://tailwindcss.com/))
 - backend : Django(Django REST framework)
 - db : PostgreSQL
+  
+</div></details>
 
 # 開発の始め方
 
@@ -60,3 +65,8 @@ $ \dt　などなど
 ```
 
 </div></details>
+
+# ローカル開発環境　確認URL
+
+front : http://localhost:15173/about   
+back :http://localhost:18000/api/

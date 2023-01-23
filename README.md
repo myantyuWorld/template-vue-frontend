@@ -23,8 +23,8 @@ https://docs.aws.amazon.com/ja_jp/prescriptive-guidance/latest/patterns/deploy-a
 % cp .env_template django-copilot/.env // AWS ACCESS KEY等は、Slack#ブックマーク参照
 % docker-compose build
 % docker compose run frontend yarn install
-% docker-compose run --rm api python manage.py makemigrations
-% docker-compose run --rm api python manage.py migrate
+% docker-compose run --rm web python manage.py makemigrations
+% docker-compose run --rm web python manage.py migrate
 % docker compose up
 ```
 

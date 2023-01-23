@@ -20,6 +20,8 @@ https://docs.aws.amazon.com/ja_jp/prescriptive-guidance/latest/patterns/deploy-a
 
 # 開発の始め方
 
+<details><summary>詳細はこちら</summary><div>
+
 ### 初期設定コマンド
 
 ```sh
@@ -56,3 +58,5 @@ postgres
 $ \d
 $ \dt　などなど
 ```
+
+</div></details>

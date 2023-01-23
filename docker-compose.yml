@@ -61,7 +61,7 @@ services:
       context: .
       dockerfile: django-copilot/Dockerfile
     env_file:
-      - django-copilot/.env
+      - .env
     ports:
       - "18000:8000"
     volumes:

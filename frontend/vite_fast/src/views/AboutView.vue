@@ -28,6 +28,14 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import axios from 'axios'
+
+const aaa = axios.get("http://localhost:18000/api/members/")
+console.log(aaa)
+
+</script>
+
 <style>
 @media (min-width: 1024px) {
   .about {
